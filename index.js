@@ -1,7 +1,26 @@
-let add = function(jsCode){
-  let tag = document.createElement('script');
-  tag.innerHTML = jsCode;
-  document.head.appendChild(tag);
+let customjs = {
+  // This function is used to add raw Javascript code into the DOM.
+  // JavaScript code is a string primitive
+  add: (jsCode)=>{
+    let errorMsg = "vue-customjs:\n You cant leave the add() funciton empty without a JavaScript code";
+      jsCode.trim().length < 1 ? console.error(errorMsg) : ""; // a check to know whether jsCode is empty
+      let tag = document.createElement('script');
+      tag.innerHTML = jsCode;
+      document.head.appendChild(tag);
+  },
+  // This function is used to pass a javascript file which is to be Added to the DOM.
+  addPath: (filePath)=>{
+    // try-catch to throw error when the filePath is invalid
+    try{
+      let code = require(filePath);
+      let tag = document.createElement('script');
+      tag.innerHTML = code;
+      document.head.appendChild(tag);
+    }catch(e){
+      console.error(e);
+    }
+
+  }
 }
 
 /*
@@ -11,19 +30,17 @@ let add = function(jsCode){
 *   BE FOR ONLY THE COMPONENT.
 */
 
-// let addScript = function(name,jsCode){
+// addScript: (name,jsCode)=>{
 //   let tag = document.createElement('script');
 //   tag.setAttribute("data-name",name);
 //   tag.innerHTML = jsCode;
 //   document.head.appendChild(tag);
 // }
 //
-// let removeScript = function(name){
+// removeScript: (name)=>{
 //   let script = document.head.querySelector('[data-name="'+name+'"]');
 //   script.parentNode.removeChild(script);
 //   console.log(script);
 // }
 
-module.exports = {
-  add,
-}
+module.exports = customjs;
