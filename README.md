@@ -12,7 +12,10 @@ Below are the available functions or methods for adding a custom javascript code
 ## Examples
 1. **add(jsCode)**: The add function takes only one parameter which is the JavaScript code(jsCode) in a form of a string.
 ```javascript
-var jsCode = " var a = 'I am a custom JavaScript code'; alert(a); ";
+var jsCode = `
+var a = 'I am a custom JavaScript code';
+alert(a);
+`;
 customjs.add(jsCode);
 ```
 2. **addPath(filePath)**: The addPath function also takes only one parameter which is the path to the external JavaScript file.
