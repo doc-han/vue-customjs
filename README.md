@@ -12,7 +12,7 @@ import customjs from 'vue-customjs'
 ## Available functions/Methods
 Below are the available functions or methods for adding a custom javascript code to your vue component.
 * **add**: Used to add custom JavaScript which is in the form of a string.
-* **addPath**: Used to add custom JavaScript written in a different .js file.
+<!-- * **addPath**: Used to add custom JavaScript written in a different .js file. -->
 * **addUrl**: Used to add custom JavaScript from an external link
 ## Examples
 1. **add(jsCode)**: The add function takes only one parameter which is the JavaScript code(jsCode) in a form of a string.
@@ -23,11 +23,11 @@ alert(a);
 `;
 customjs.add(jsCode);
 ```
-2. **addPath(filePath)**: The addPath function also takes only one parameter which is the path to the external JavaScript file.
+<!-- 2. **addPath(filePath)**: The addPath function also takes only one parameter which is the path to the external JavaScript file.
 ```javascript
 customjs.addPath("./../snow.js");
-```
-3. **addUrl(url)**: This function takes one and only one parameter which is the url;
+``` -->
+2. **addUrl(url)**: This function takes one and only one parameter which is the url;
 ```javascript
 customjs.addUrl("https:www.cdn.com/library");
 ```
@@ -52,7 +52,7 @@ export default {
 }
 </script>
 ```
-* addPath
+<!-- * addPath
 ```html
 <script>
 var customjs = require('vue-customjs'); //importing the module into customjs var
@@ -70,7 +70,7 @@ export default {
   }
 }
 </script>
-```
+``` -->
 * addUrl
 ```html
 <script>
