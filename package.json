@@ -17,5 +17,7 @@
   ],
   "author": "Farhan Yahya",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "path": "^0.12.7"
+  }
 }
