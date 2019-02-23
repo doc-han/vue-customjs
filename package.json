@@ -1,6 +1,6 @@
 {
   "name": "vue-customjs",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "A simple package to enable users to add custom JavaScript to a vue Component or project ",
   "main": "./lib/index.js",
   "scripts": {
