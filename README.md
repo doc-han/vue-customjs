@@ -80,10 +80,8 @@ export default {
       //nothing to do here
     }
   },
-  methods: {
-    showSnow: ()=>{
-      customjs.addPath('https:www.cdn.com/library'); //The path to your .js file
-    }
+  created: ()=>{
+      customjs.addPath('https:www.cdn.com/library'); //The url of the library you want to add
   }
 }
 </script>
