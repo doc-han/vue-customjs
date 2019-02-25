@@ -1,3 +1,5 @@
+view package at https://www.npmjs.com/package/vue-customjs
+
 # vue-customjs
 A simple package to enable users to add custom JavaScript to a vue Component or project
 ## Initialisation
