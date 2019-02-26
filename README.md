@@ -16,6 +16,9 @@ Below are the available functions or methods for adding a custom javascript code
 * **addUrl**: Used to add custom JavaScript from an external link, mostly libraries.
 ## Examples
 1. **add(jsCode)**: The add function takes only one parameter which is the JavaScript code(jsCode) in a form of a string.
+### Note:
+  Code added using this function is registered to the global scope. Meaning it not just called when the function in which it is defined is called. Hence you can register new Javascript codes to be added to the DOM.
+  Code added using this function get to run always.
 ```javascript
 var jsCode = `
 var a = 'I am a custom JavaScript code';
